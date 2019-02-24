@@ -1,0 +1,23 @@
+NativeArray<T0>
+struct in Unity.Collections/Implemented in:UnityEngine.CoreModule
+Description
+A NativeArray exposes a buffer of native memory to managed code, making it possible to share data between managed and native without marshalling costs.
+
+Behind the scenes, NativeArrays provide systems that allows them to be used safely with jobs, and automatic tracking of memory leaks.
+
+Properties
+IsCreated	Indicates that the NativeArray has an allocated memory buffer.
+Length	Number of elements in the NativeArray.
+this[int]	Access NativeArray elements by index. Notice that structs are returned by value and not by reference.
+Constructors
+NativeArray_1	Creates a new NativeArray from an existing array of elements.
+Public Methods
+CopyFrom	Copy all the elements from another NativeArray or managed array of the same length.
+CopyTo	Copy all elements to another NativeArray or managed array of the same length.
+Dispose	Disposes the NativeArray.
+Equals	Compares to NativeArray.
+GetEnumerator	Get enumerator.
+GetHashCode	Returns a hash code for the current instance.
+ToArray	Convert NativeArray to array.
+Static Methods
+Copy	Copies a range of elements from a source array to a destination array, starting from the source index and copying them to the destination index.
