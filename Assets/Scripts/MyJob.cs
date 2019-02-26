@@ -25,6 +25,6 @@ public struct MyJobMul : IJob
     //接口必须实现的方法
     public void Execute()
     {
-        result[0] = a * b;
+        result[0] = a * b+result[0];
     }
 }

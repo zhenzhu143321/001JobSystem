@@ -31,15 +31,15 @@ public class Main : MonoBehaviour
         //创建一个相乘的作业,将上面工作处理的结果再乘10求出结果
         MyJobMul jobData1 = new MyJobMul();
         jobData1.a = 10;//拷贝处理数据到作业中
-        jobData1.b = result[0];//拷贝处理数据到作业中
+        jobData1.b = 10;//拷贝处理数据到作业中
         jobData1.result = result;//把作业中的结果引用指向主线程中的结果数据
         // 调度本作业
-        JobHandle handle1 = jobData1.Schedule();
+        JobHandle handle1 = jobData1.Schedule(handle);
+
         handle1.Complete();
 
         //把作业处理后的结果拷贝到主线程变量中
         float aPlusB = result[0];
-
         //释放分配的内存
         result.Dispose();
         Debug.Log(aPlusB);
